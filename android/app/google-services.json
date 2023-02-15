@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "26018046793",
+    "project_id": "tinder-binder-7a813",
+    "storage_bucket": "tinder-binder-7a813.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:26018046793:android:7950d604377cae5f24f098",
+        "android_client_info": {
+          "package_name": "com.tinderbinder.users"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "26018046793-5drqaajtnokcjbifkk804nmfh51seufr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tinderbinder.users",
+            "certificate_hash": "3d6cc72c9bd468cda8ef18f5019ab9c769566bd3"
+          }
+        },
+        {
+          "client_id": "26018046793-rf3r5d1oqe8u23vlonuvnc32dgke871d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tinderbinder.users",
+            "certificate_hash": "9dc16957fcac4da8d9c15f04e3d1d2115c53ddf4"
+          }
+        },
+        {
+          "client_id": "26018046793-spok32pkv2hoas8fvjip0epui3vfollb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhyp1eoOmCCgvrpj64_fcoj3QbSTKVLCA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "26018046793-spok32pkv2hoas8fvjip0epui3vfollb.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "26018046793-lng0a7voumqsk329m4tfa02a9knaqau4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.tinderbinder.users"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
