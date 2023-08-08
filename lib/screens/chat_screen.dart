@@ -291,18 +291,18 @@ class _ChatScreenState extends State<ChatScreen> {
             initialValue: "",
             itemBuilder: (context) => <PopupMenuEntry<String>>[
               /// Delete Chat
-              PopupMenuItem(
-                  value: "delete_chat",
-                  child: Row(
-                    children: <Widget>[
-                      SvgIcon("assets/icons/trash_icon.svg",
-                          width: 20,
-                          height: 20,
-                          color: Theme.of(context).primaryColor),
-                      const SizedBox(width: 5),
-                      Text(_i18n.translate("delete_conversation")),
-                    ],
-                  )),
+              // PopupMenuItem(
+              //     value: "delete_chat",
+              //     child: Row(
+              //       children: <Widget>[
+              //         SvgIcon("assets/icons/trash_icon.svg",
+              //             width: 20,
+              //             height: 20,
+              //             color: Theme.of(context).primaryColor),
+              //         const SizedBox(width: 5),
+              //         Text(_i18n.translate("delete_conversation")),
+              //       ],
+              //     )),
 
               /// Delete Match
               PopupMenuItem(
@@ -414,16 +414,16 @@ class _ChatScreenState extends State<ChatScreen> {
           Container(
             color: Colors.grey.withAlpha(50),
             child: ListTile(
-                leading: IconButton(
-                    icon: const SvgIcon("assets/icons/camera_icon.svg",
-                        width: 20, height: 20),
-                    onPressed: () async {
-                      /// Send image file
-                      await _getImage();
+                // leading: IconButton(
+                //     icon: const SvgIcon("assets/icons/camera_icon.svg",
+                //         width: 20, height: 20),
+                //     onPressed: () async {
+                //       /// Send image file
+                //       await _getImage();
 
-                      /// Update scroll
-                      _scrollMessageList();
-                    }),
+                //       /// Update scroll
+                //       _scrollMessageList();
+                //     }),
                 title: TextField(
                   controller: _textController,
                   minLines: 1,

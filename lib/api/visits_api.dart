@@ -35,7 +35,7 @@ class VisitsApi {
 
       /// Send push notification
       await _notificationsApi.sendPushNotification(
-          nTitle: APP_NAME,
+          nTitle: UserModel().user.userFullname,
           nBody: nMessage,
           nType: 'visit',
           nSenderId: UserModel().user.userId,
@@ -58,15 +58,15 @@ class VisitsApi {
         .where(VISITED_USER_ID, isEqualTo: visitedUserId)
         .get()
         .then((QuerySnapshot<Map<String, dynamic>> snapshot) async {
-      if (snapshot.docs.isEmpty) {
-        _saveVisit(
-            visitedUserId: visitedUserId,
-            userDeviceToken: userDeviceToken,
-            nMessage: nMessage);
-        debugPrint('visitUserProfile() -> success');
-      } else {
-        debugPrint('You already visited the user');
-      }
+      // if (snapshot.docs.isEmpty) {
+      _saveVisit(
+          visitedUserId: visitedUserId,
+          userDeviceToken: userDeviceToken,
+          nMessage: nMessage);
+      debugPrint('visitUserProfile() -> success');
+      // } else {
+      //   debugPrint('You already visited the user');
+      // }
     }).catchError((e) {
       debugPrint('visitUserProfile() -> error: $e');
     });

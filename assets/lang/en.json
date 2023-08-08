@@ -85,6 +85,7 @@
   "DISLIKED_PROFILES": "PROFILES DISLIKED BY YOU",
   "INTEREST_RECEIVED": "INTERESTS RECEIVED",
   "PROFILE_VISITS": "PROFILE VISITORS",
+  "INTEREST_SENT": "INTERESTS SENT",
   "application": "Application",
   "share_with_friends": "Share app with friends",
   "rate_on_play_store": "Rate on Play Store",
@@ -156,6 +157,7 @@
   "_ProfileLikesScreen": "*** ProfileLikes Screen Translations ***",
   "likes": "Likes",
   "users_who_liked_you": "Users who are interested in you",
+  "users_who_liked_by_you":"Profiles you liked",
   "liked_your_profile_click_and_see": "liked your profile...",
   "like_sent_to": "Interest sent to:", 
 

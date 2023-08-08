@@ -10,12 +10,14 @@ class ChatMessage extends StatelessWidget {
   final String timeAgo;
 
   const ChatMessage(
-      {Key? key, required this.isUserSender,
+      {Key? key,
+      required this.isUserSender,
       required this.userPhotoLink,
       required this.timeAgo,
       this.isImage = false,
       this.imageLink,
-      this.textMessage}) : super(key: key);
+      this.textMessage})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +25,7 @@ class ChatMessage extends StatelessWidget {
     final _userProfilePhoto = CircleAvatar(
       backgroundColor: Theme.of(context).primaryColor,
       backgroundImage: NetworkImage(userPhotoLink),
-      onBackgroundImageError: (e, s) => { debugPrint(e.toString()) },
+      onBackgroundImageError: (e, s) => {debugPrint(e.toString())},
     );
 
     return Container(
@@ -31,7 +33,9 @@ class ChatMessage extends StatelessWidget {
       child: Row(
         children: <Widget>[
           /// User receiver photo Left
-          !isUserSender ? _userProfilePhoto : const SizedBox(width: 0, height: 0),
+          // !isUserSender
+          //     ? _userProfilePhoto
+          //     : const SizedBox(width: 0, height: 0),
 
           const SizedBox(width: 10),
 
@@ -59,8 +63,7 @@ class ChatMessage extends StatelessWidget {
                       ? GestureDetector(
                           onTap: () {
                             // Show full image
-                            Navigator.of(context).push(
-                              MaterialPageRoute(
+                            Navigator.of(context).push(MaterialPageRoute(
                                 builder: (context) =>
                                     _ShowFullImage(imageLink!)));
                           },
@@ -104,8 +107,10 @@ class ChatMessage extends StatelessWidget {
           ),
           const SizedBox(width: 10),
 
-          /// Current User photo right
-          isUserSender ? _userProfilePhoto : const SizedBox(width: 0, height: 0),
+          // /// Current User photo right
+          // isUserSender
+          //     ? _userProfilePhoto
+          //     : const SizedBox(width: 0, height: 0),
         ],
       ),
     );

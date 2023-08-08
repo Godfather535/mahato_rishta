@@ -100,6 +100,33 @@ class LikesApi {
     return querySnapshot.docs;
   }
 
+  /// Get users who liked current user profile
+  Future<List<DocumentSnapshot<Map<String, dynamic>>>> getLikedByyMeUsers(
+      {bool loadMore = false,
+      DocumentSnapshot<Map<String, dynamic>>? userLastDoc}) async {
+    /// Build Users query
+    Query<Map<String, dynamic>> usersQuery = _firestore
+        .collection(C_LIKES)
+        .where(LIKED_BY_USER_ID, isEqualTo: UserModel().user.userId);
+
+    /// Check load more
+    if (loadMore) {
+      usersQuery = usersQuery.startAfterDocument(userLastDoc!);
+    }
+
+    /// Finalize query and Limit data
+    usersQuery = usersQuery.orderBy(TIMESTAMP, descending: true);
+    usersQuery = usersQuery.limit(20);
+
+    final QuerySnapshot<Map<String, dynamic>> querySnapshot =
+        await usersQuery.get().catchError((e) {
+      debugPrint('getLikedMeUsers() -> error: $e');
+      return e;
+    });
+
+    return querySnapshot.docs;
+  }
+
   /// Delete liked profile: when current user decides to dislike it
   Future<void> deleteLike(String likedUserId) async {
     _firestore
